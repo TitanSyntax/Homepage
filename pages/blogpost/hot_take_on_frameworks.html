@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hot Take on Frameworks | Michel Gärnter</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo"></div>
+                <ul class="nav-links">
+                    <li><a href="../index.html#home">Home</a></li>
+                    <li><a href="../index.html#about">About</a></li>
+                    <li><a href="../index.html#skills">Skills</a></li>
+                    <li><a href="../index.html#projects">Projects</a></li>
+                    <li><a href="../index.html#contact">Contact</a></li>
+                    <li><a href="../blog.html">Blog</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="blog-header">
+        <div class="container">
+            <h1>Hot Take on Frameworks</h1>
+            <p>April 14, 2025 | Thoughts on Modern Web Development</p>
+        </div>
+    </section>
+
+    <section class="blog-post">
+        <div class="container">
+            <div class="blog-post-content">
+                <a href="../blog.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+                <div class="blog-post-image">
+                    <img src="../../img/frameworks.webp" alt="JavaScript Frameworks">
+                </div>
+                <div class="blog-post-text">
+                    <h3>The Framework Paradox</h3>
+                    <p>Vue, Angular, React, and countless more! There are so many frameworks out there that it's hard to keep up. Each one promises to make development easier, faster, and more maintainable. But at what cost?</p>
+                    <p>Let's take a step back and look at what we're actually trying to achieve: building websites and web applications that are fast, responsive, and user-friendly. Are we really making things better, or are we just adding layers of complexity?</p>
+
+                    <h3>The Boilerplate Burden</h3>
+                    <p>Modern JavaScript frameworks come with a significant amount of boilerplate code. Just to get started, you need to:</p>
+                    <ul>
+                        <li><i class="fas fa-code"></i> Set up build tools (Webpack, Vite, etc.)</li>
+                        <li><i class="fas fa-code"></i> Configure routing</li>
+                        <li><i class="fas fa-code"></i> Set up state management</li>
+                        <li><i class="fas fa-code"></i> Configure testing environments</li>
+                        <li><i class="fas fa-code"></i> Set up development servers</li>
+                    </ul>
+
+                    <p>All of this before writing a single line of actual application code. The irony? We're using these tools to make development "easier," but we're spending more time configuring them than building our actual product.</p>
+
+                    <h3>The Performance Impact</h3>
+                    <p>Let's talk about performance. Modern frameworks often come with a significant performance cost:</p>
+                    <ul>
+                        <li><i class="fas fa-tachometer-alt"></i> Large bundle sizes (often 100KB+ just for the framework)</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Client-side rendering overhead</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Virtual DOM diffing and reconciliation</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Hydration costs for server-rendered content</li>
+                        <li><i class="fas fa-tachometer-alt"></i> Memory usage for state management</li>
+                    </ul>
+
+                    <p>All of this leads to slower initial page loads, increased memory usage, and sometimes janky user experiences. We're trading performance for developer convenience.</p>
+
+                    <h3>The Learning Curve</h3>
+                    <p>Each framework comes with its own ecosystem and learning curve:</p>
+                    <ul>
+                        <li><i class="fas fa-book"></i> Framework-specific syntax and patterns</li>
+                        <li><i class="fas fa-book"></i> Ecosystem of plugins and libraries</li>
+                        <li><i class="fas fa-book"></i> Best practices and conventions</li>
+                        <li><i class="fas fa-book"></i> Build tool configurations</li>
+                        <li><i class="fas fa-book"></i> State management solutions</li>
+                    </ul>
+
+                    <p>New developers need to learn not just JavaScript, but also the framework's way of doing things. This creates a barrier to entry and can slow down development when team members need to get up to speed.</p>
+
+                    <h3>When Frameworks Make Sense</h3>
+                    <p>I'm not saying frameworks are always bad. They have their place:</p>
+                    <ul>
+                        <li><i class="fas fa-check-circle"></i> Complex single-page applications with rich interactivity</li>
+                        <li><i class="fas fa-check-circle"></i> Large teams needing standardized approaches</li>
+                        <li><i class="fas fa-check-circle"></i> Applications requiring real-time updates</li>
+                        <li><i class="fas fa-check-circle"></i> Projects with complex state management needs</li>
+                    </ul>
+
+                    <h3>The Alternative Approach</h3>
+                    <p>For many projects, we might be better off with a simpler approach:</p>
+                    <ul>
+                        <li><i class="fas fa-lightbulb"></i> Progressive enhancement</li>
+                        <li><i class="fas fa-lightbulb"></i> Server-side rendering with minimal JavaScript</li>
+                        <li><i class="fas fa-lightbulb"></i> Using vanilla JavaScript for interactivity</li>
+                        <li><i class="fas fa-lightbulb"></i> Leveraging the platform's built-in features</li>
+                    </ul>
+
+                    <p>This approach often leads to:</p>
+                    <ul>
+                        <li><i class="fas fa-rocket"></i> Faster initial page loads</li>
+                        <li><i class="fas fa-rocket"></i> Better SEO</li>
+                        <li><i class="fas fa-rocket"></i> Lower maintenance costs</li>
+                        <li><i class="fas fa-rocket"></i> Easier debugging</li>
+                        <li><i class="fas fa-rocket"></i> Better accessibility</li>
+                    </ul>
+
+                    <h3>Finding the Right Balance</h3>
+                    <p>The key is to choose the right tool for the job. Before reaching for a framework, ask yourself:</p>
+                    <ul>
+                        <li><i class="fas fa-question-circle"></i> Do we really need a framework for this?</li>
+                        <li><i class="fas fa-question-circle"></i> What are the performance requirements?</li>
+                        <li><i class="fas fa-question-circle"></i> How complex is the application?</li>
+                        <li><i class="fas fa-question-circle"></i> What's the team's expertise?</li>
+                        <li><i class="fas fa-question-circle"></i> What are the long-term maintenance costs?</li>
+                    </ul>
+
+                    <p>Remember, the goal isn't to use the latest framework or follow the trend. The goal is to build fast, reliable, and maintainable web applications that serve our users well.</p>
+
+                    <p>Sometimes, the simplest solution is the best one. And sometimes, that means going back to basics and using the web platform as it was intended.</p>
+
+                    <p>Thanks for reading!</p>
+                </div>
+                <div class="blog-post-tags">
+                    <span>JavaScript</span>
+                    <span>TypeScript</span>
+                    <span>Frameworks</span>
+                    <span>Software Development</span>
+                    <span>Vue</span>
+                    <span>Angular</span>
+                    <span>React</span>
+                </div>
+                <a href="../blog.html" class="back-button"><i class="fas fa-arrow-left"></i> Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#skills">Skills</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="../blog.html">Blog</a>
+                    <a href="../index.html#contact">Contact</a>
+                    <a href="../pages/datenschutz.html">Datenschutz</a>
+                    <a href="../impressum.html">Impressum</a>
+                </div>
+                <p>&copy; 2025 Michel Gärnter. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../script.js"></script>
+</body>
+</html>
