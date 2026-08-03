@@ -237,16 +237,33 @@ button {
 }
 
 .menu-button > span:not(.sr-only) {
+  position: absolute;
+  left: 50%;
   display: block;
-  width: 100%;
+  width: 28px;
   height: 1px;
-  margin: 6px 0;
+  margin: 0;
   background: var(--silver);
-  transition: transform 220ms ease, opacity 220ms ease;
+  transform: translateX(-50%);
+  transform-origin: center;
+  transition: top 250ms ease, transform 250ms ease, opacity 200ms ease;
+}
+
+.menu-button > span:first-child {
+  top: calc(50% - 7px);
+}
+
+.menu-button > span:nth-child(2) {
+  top: 50%;
+}
+
+.menu-button > span:nth-child(3) {
+  top: calc(50% + 7px);
 }
 
 .menu-button[aria-expanded="true"] > span:first-child {
-  transform: translateY(7px) rotate(45deg);
+  top: 50%;
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .menu-button[aria-expanded="true"] > span:nth-child(2) {
@@ -254,7 +271,8 @@ button {
 }
 
 .menu-button[aria-expanded="true"] > span:nth-child(3) {
-  transform: translateY(-7px) rotate(-45deg);
+  top: 50%;
+  transform: translateX(-50%) rotate(-45deg);
 }
 
 .mobile-nav {
