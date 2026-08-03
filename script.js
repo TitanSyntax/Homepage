@@ -10,6 +10,7 @@ const translations = {
     navInterests: "Interessen",
     navContact: "Kontakt",
     menuLabel: "Menü öffnen",
+    menuClose: "Menü schließen",
     heroIntro: "Softwareentwickler mit Freude an kreativen Lösungen und einem klaren Anspruch an funktionale, schnelle Software.",
     exploreWork: "Projekt entdecken",
     startConversation: "Kontakt aufnehmen",
@@ -67,6 +68,7 @@ const translations = {
     navInterests: "Interests",
     navContact: "Contact",
     menuLabel: "Open menu",
+    menuClose: "Close menu",
     heroIntro: "Software developer driven by creative solutions and a clear focus on functional, fast software.",
     exploreWork: "Explore project",
     startConversation: "Start a conversation",
@@ -152,6 +154,7 @@ function setLanguage(language) {
     button.setAttribute("aria-pressed", String(isActive));
   });
 
+  updateMenuLabel(menuButton.getAttribute("aria-expanded") === "true");
   localStorage.setItem("portfolio-language", selectedLanguage);
 }
 
@@ -163,6 +166,7 @@ function closeMenu() {
   menuButton.setAttribute("aria-expanded", "false");
   mobileNav.classList.remove("is-open");
   document.body.classList.remove("menu-open");
+  updateMenuLabel(false);
 }
 
 menuButton.addEventListener("click", () => {
@@ -170,7 +174,15 @@ menuButton.addEventListener("click", () => {
   menuButton.setAttribute("aria-expanded", String(willOpen));
   mobileNav.classList.toggle("is-open", willOpen);
   document.body.classList.toggle("menu-open", willOpen);
+  updateMenuLabel(willOpen);
 });
+
+function updateMenuLabel(isOpen) {
+  const language = document.documentElement.lang === "en" ? "en" : "de";
+  const label = translations[language][isOpen ? "menuClose" : "menuLabel"];
+  menuButton.querySelector(".sr-only").textContent = label;
+  menuButton.setAttribute("aria-label", label);
+}
 
 mobileNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeMenu));
 
